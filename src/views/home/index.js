@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { inputChange } from './store/createActions'
+// import { inputChange } from './store/createActions'
 class Index extends React.Component {
   constructor (props) {
 
@@ -21,9 +21,9 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    inputChange(value) {
-      dispatch(inputChange(value))
-    }
+    // inputChange(value) {
+    //   dispatch(inputChange(value))
+    // }
   }
 }
 

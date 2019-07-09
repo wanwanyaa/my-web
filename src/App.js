@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route, Redirect } from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Index from './views/home'
 function App() {
   return (

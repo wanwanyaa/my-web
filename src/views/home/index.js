@@ -5,7 +5,7 @@ import { Switch, Route, Redirect, Link } from 'react-router-dom'
 // import { inputChange } from './store/createActions'
 import './index.less'
 import ReactStudy from './ReactStudy'
-
+import writeArticle from './writeArticle'
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -24,12 +24,14 @@ class Index extends React.Component {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['2']}
+            defaultSelectedKeys={['5']}
             style={{ lineHeight: '64px' }}
           >
-            <Menu.Item key="1">nav 1</Menu.Item>
-            <Menu.Item key="2">nav 2</Menu.Item>
-            <Menu.Item key="3">nav 3</Menu.Item>
+            <Menu.Item key="1">HTML</Menu.Item>
+            <Menu.Item key="2">CSS</Menu.Item>
+            <Menu.Item key="3">JS</Menu.Item>
+            <Menu.Item key="4">VUE</Menu.Item>
+            <Menu.Item key="5">REACT</Menu.Item>
           </Menu>
         </Header>
         <Layout>
@@ -50,27 +52,27 @@ class Index extends React.Component {
                 key="sub1"
                 title={
                   <span>
-                    <Icon type="user" />
+                    <Icon type="read" />
                     React学习
                   </span>
                 }
               >
                 <Menu.Item key="1"><Link to="/home/reactStudy">React路由</Link></Menu.Item>
-                <Menu.Item key="2">option2</Menu.Item>
-                <Menu.Item key="3">option3</Menu.Item>
-                <Menu.Item key="4">option4</Menu.Item>
+                <Menu.Item key="2">Redux</Menu.Item>
+                <Menu.Item key="3">Immutable</Menu.Item>
+                <Menu.Item key="4">JSX</Menu.Item>
               </SubMenu>
               <SubMenu
                 key="sub2"
                 title={
                   <span>
-                    <Icon type="laptop" />
-                    subnav 2
+                    <Icon type="read" />
+                    写点东西
                   </span>
                 }
               >
-                <Menu.Item key="5">option5</Menu.Item>
-                <Menu.Item key="6">option6</Menu.Item>
+                <Menu.Item key="5">文章</Menu.Item>
+                <Menu.Item key="6">笔记</Menu.Item>
                 <Menu.Item key="7">option7</Menu.Item>
                 <Menu.Item key="8">option8</Menu.Item>
               </SubMenu>
@@ -110,6 +112,7 @@ class Index extends React.Component {
             >
               <Switch>
                 <Route path='/home/reactStudy' component={ ReactStudy }></Route>
+                <Route path='/home/writeArticle' component={ writeArticle }></Route>
               </Switch>
             </Content>
           </Layout>

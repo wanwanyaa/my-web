@@ -22,9 +22,10 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "SET PORT=3000 && SET TARGET=http://58.1.39.47 && react-app-rewired start",
+    "start": "SET PORT=3000 && SET HOST=http://58.1.39.47 && react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
